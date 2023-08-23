@@ -116,6 +116,7 @@ int  icem_alloc(struct icem **icemp, enum ice_role role, int proto, int layer,
 	icem->chkh  = chkh;
 	icem->arg   = arg;
 	icem->tiebrk = tiebrk;
+	icem->last_br = 0;
 
 	err = str_dup(&icem->lufrag, lufrag);
 	err |= str_dup(&icem->lpwd, lpwd);
