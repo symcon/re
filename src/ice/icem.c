@@ -236,6 +236,11 @@ int icem_comp_add(struct icem *icem, unsigned compid, void *sock)
 	return 0;
 }
 
+uint64_t icem_last_br(struct icem *icem)
+{
+    return icem->last_br;
+}
+
 
 static void *unique_handler(struct le *le1, struct le *le2)
 {

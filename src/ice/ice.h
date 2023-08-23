@@ -70,6 +70,7 @@ struct icem {
 	ice_connchk_h *chkh;         /**< Connectivity check handler         */
 	void *arg;                   /**< Handler argument                   */
 	char name[32];               /**< Name of the media stream           */
+	uint64_t last_br;            /**< ts of last ok binding request      */
 };
 
 /** Defines a candidate */

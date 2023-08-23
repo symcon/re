@@ -143,6 +143,10 @@ static int handle_stun_full(struct icem *icem,
 	(void)tunnel;
 #endif
 
+    if (cp->state == ICE_CANDPAIR_SUCCEEDED) {
+       icem->last_br = time(NULL);
+    }
+
 	/* 7.2.1.5.  Updating the Nominated Flag */
 	if (use_cand) {
 		if (icem->lrole == ICE_ROLE_CONTROLLED &&

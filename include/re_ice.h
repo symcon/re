@@ -80,7 +80,7 @@ void icem_set_conf(struct icem *icem, const struct ice_conf *conf);
 void icem_set_role(struct icem *icem, enum ice_role role);
 void icem_set_name(struct icem *icem, const char *name);
 int  icem_comp_add(struct icem *icem, unsigned compid, void *sock);
-
+uint64_t icem_last_br(struct icem *icem);
 bool icem_verify_support(struct icem *icem, unsigned compid,
 			 const struct sa *raddr);
 int  icem_conncheck_start(struct icem *icem);
